@@ -1,0 +1,220 @@
+%----------------------------------------------------------------------------------------------------------
+% 	Copyright (c) 2008 Christophe Dutang, 
+% 	
+% 	The following Latex code is given as an example and not The example
+%	of using Latex to write report, memoir or thesis. 
+%
+%	The licence is unlimited but the copyright authors could NOT be liable
+%	for any direct or indirect damages caused by the use of the following code.
+%
+%	The following code could be compiled :
+%	  - on windows with a Tex distribution such as miktex (http://miktex.org) 
+%		and a front end Latex editor such as texniccenter (http://www.toolscenter.org)
+%	  - on mac os with a Tex distribution such as TexLive and a front end Latex
+%	  	editor such as Texshop (http://www.uoregon.edu/~koch/texshop/)
+%	  - on linux with a Tex distribution such as teTex (http://www.tug.org/teTeX/)
+%	  	and a front end Latex editor such as emacs (http://www.gnu.org/software/emacs/)
+%
+%	  We may use \'e (\`e, \`a,...) instead of the accented character to ensure the 
+%	    portability of the Latex code. This is NOT an obligation of Latex.
+%
+%----------------------------------------------------------------------------------------------------------
+
+\documentclass[11pt,twoside]{report}
+
+% package
+%symbole math de l'American Mathematical Society (AMS)
+\usepackage{amsfonts,amssymb,amsmath}
+
+\usepackage[english]{babel}
+\usepackage{a4wide,courier,newlfont}
+
+% accents 8 bits dans le fichier
+%\usepackage[applemac]{inputenc} %MAC encoding
+\usepackage[latin1]{inputenc} %UNIX encoding
+%\usepackage[ansinew]{inputenc} %WINDOWS encoding
+
+%graphique
+\usepackage[dvips]{graphicx}
+\usepackage{color,graphics}
+
+\usepackage{tabls}
+
+%citation
+\usepackage{natbib}
+
+%note de bas de page
+\usepackage[symbol,stable]{footmisc}
+\usepackage{perpage}
+\MakePerPage[1]{footnote}
+
+%header
+\pagestyle{headings}
+
+%pour les url
+\usepackage{url}
+\urlstyle{sf}
+
+%table of contents
+\usepackage{shorttoc}
+\usepackage[pagebackref=true, hyperfootnotes=false]{hyperref}
+
+
+%plusieur colonne dans tableau
+\usepackage{multirow}
+
+%figure add ons
+\usepackage{wrapfig}
+
+
+% layout
+\normalsize\setlength{\parskip}{\baselineskip}
+\setlength{\oddsidemargin}{25mm}
+\setlength{\evensidemargin}{25mm}
+\setlength{\voffset}{-1in}
+\setlength{\hoffset}{-1in}
+\setlength{\textwidth}{165mm}
+\setlength{\topmargin}{0mm}
+\setlength{\headheight}{15mm}
+\setlength{\headsep}{11mm}
+\setlength{\topskip}{0mm}
+\setlength{\textheight}{232mm}
+
+
+
+% les macros
+\newcommand\HRule{\noindent\rule{\linewidth}{1pt}}
+\newcommand{\II}{\mbox{\large 1\hskip -0,353em 1}}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\ligne}{\rule[2mm]{.3\textwidth}{0,5mm}\\}
+\newcommand{\pkg}{\textbf}
+\newcommand{\sigle}{\textsc}
+\newcommand{\code}{\texttt}
+\newcommand{\soft}{\textsf}
+\newcommand{\myskip}{\vspace{\parskip}}
+\newcommand{\txtm}[1]{\textrm{~~#1~~}}
+\newcommand{\expo}{\textsuperscript}
+\newcommand{\ind}{1\!\!1}
+\newcommand{\mat}[1]{\mathbf{#1}}
+\newcommand{\blank}{ \clearpage{\pagestyle{empty}\cleardoublepage} }
+\newcommand{\card}{\textrm{Card}}
+\newcommand{\esp}[2]{\mathbb{#1}\left[ #2 \right]}
+\newcommand{\mbb}{\mathbb}
+\newcommand{\mcal}{\mathcal}
+\newcommand{\sign}{\textrm{sign}}
+
+% footnote in table or legend
+\newcounter{noteTabCap} 
+\newcommand{\initFmark}{\setcounter{noteTabCap}{0}} %init noteTabCap counter
+\newcommand{\fmark}{\footnotemark  \addtocounter{noteTabCap}{1}} %mark footnote
+\newcommand{\updateFtext}{\addtocounter{footnote}{-\value{noteTabCap}}} %update footnote counter
+\newcommand{\ftext}[1]{\addtocounter{footnote}{1}  \footnotetext{#1}} %set the footnote text
+
+
+
+\title{A guide on probability distributions}
+\author{C. Dutang, D. L\"uthi and many others}
+
+\date{some day in 2009}
+
+\begin{document}
+
+
+
+\begin{titlepage}
+\setlength\headheight{4pt}
+\setlength\footskip{0pt}
+
+{\normalsize \LaTeX powered \hfill 
+			Mac OS' TeXShop edited }
+			
+\vspace{200pt}
+
+
+\begin{center}
+\setlength\tablinesep{6pt}
+\HRule\\
+	\vspace{15pt}
+	\Huge A guide on probability distributions
+
+\HRule\\
+
+	\vspace{12pt}
+	\Large Christophe Dutang, D. L\"uthi and many others\\
+	\vspace{4pt}
+	\Large University Year 2008-2009\\
+	\vspace{4pt}	
+\end{center}
+\vspace{250pt}
+
+
+{\normalsize \LaTeX powered \hfill 
+			Mac OS' TeXShop edited }
+
+\end{titlepage}
+
+%blank page
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+
+\newpage
+
+\shorttableofcontents{Contents}{0}
+
+\addcontentsline{toc}{chapter}{Introduction}
+\input{probdistr-intro}
+
+%%%%%%%%%%%%
+%  Main chapters.
+%%%%%%%%%%%%
+\part{Discrete distributions}
+\input{probdistr-discrete}
+\input{probdistr-discrextra}
+
+\part{Continuous distributions}
+\input{probdistr-finitesupp}
+\input{probdistr-gaussian} 
+\input{probdistr-exp}
+\input{probdistr-chi}
+\input{probdistr-student}
+\input{probdistr-pareto}  
+\input{probdistr-logis}  
+\input{probdistr-gumbel}
+
+
+\part{Multivariate and generalized distributions}
+\input{probdistr-general}
+\input{probdistr-mult}
+\input{probdistr-misc}
+
+%todo
+% rappel probabilité
+
+\newpage
+\addcontentsline{toc}{chapter}{Conclusion}
+%\input{conclusion}
+
+ 
+
+
+%%%%%%%%%%%
+%  Bibiliography.
+%%%%%%%%%%%
+\newpage
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{agsm}  
+\bibliography{probdistr-ref}    
+
+
+\newpage
+\appendix
+\input{probdistr-math}
+
+%%%%%%%%%%%
+% full table of contents
+%%%%%%%%%%%
+\tableofcontents
+
+
+\end{document}

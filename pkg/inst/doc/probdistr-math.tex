@@ -1,0 +1,162 @@
+\chapter{Mathematical tools}
+\section{Basics of probability theory}
+TODO
+
+\subsection{Characterising functions}
+For a discrete distribution, one may use the probability generating function to characterize the distribution, if it exists or equivalently the moment generating function. For a continuous distribution, we generally use only the moment generating function. The moment generating function is linked to the Laplace transform of a distribution. When dealing with continuous distribution, we also use the characteristic function, which is related to the Fourrier transform of a distribution, see table below for details. 
+
+\begin{center}
+\begin{tabular}{|c|ccc|ccc|}
+
+\hline
+ Probability generating & Moment generating & & Laplace & Characteristic & & Fourrier\\
+ function $G_X(z)$ & function $M_X(t)$ & $<=>$ & Transform $L_X(s)$ & function $\phi_X(t)$ & $<=>$ & transform \\
+ \hline
+ 	&	&	&   & & &	\\
+ $\esp{E}{z^X}$ &   $\esp{E}{e^{tX}}$ & $<=>$ & $\esp{E}{e^{-sX}}$  & $ \esp{E}{e^{itX}}$ & $<=>$ & $ \esp{E}{e^{-itX}}$\\
+\hline
+\end{tabular}
+\end{center}
+
+We have the following results
+\begin{itemize}
+\item $ \forall k \in \mathbb{N}, X \txtm{discrete random variable}, P(X=k) = \frac{1}{k!}\frac{d^k G_X(t)}{dt^k}|_{t=0} ;  E(X\dots(X-k)) =  \frac{d^k G_X(t)}{dt^k}|_{t=1}$
+\item $ \forall  X \txtm{continuous random variable} E(X^k) = \frac{d^k M_X(t)}{dt^k}|_{t=0}$
+\end{itemize}
+
+
+\section{Common mathematical functions}\label{mathfun}
+In this section, we recall the common mathematical quantities used in all this guide. By definition, we have
+
+\subsection{Integral functions}
+\begin{itemize}
+\item gamma function: $ \forall a > 0, ~\Gamma(a) = \int_0^{+\infty} x^{a-1} e^{-x} dx$
+\item incomplete gamma function: lower $\forall a,x > 0, ~\gamma(a,x) = \int_0^{x} y^{a-1} e^{-y} dy$ and upper $\Gamma(a,x) = \int_x^{+\infty} y^{a-1} e^{-y} dy $;
+\item results for gamma function $\forall n \in \mbb{N}^{\star}, ~\Gamma(n) = (n-1)!, ~\Gamma(0)=1,~\Gamma(\frac{1}{2}) = \sqrt{\pi},~ \forall a > 1, ~\Gamma(a) = (a-1)\Gamma(a-1)$
+\item beta function: $\forall a,b > 0, ~\beta(a,b) = \int_0^{1} x^{a-1} (1-x)^{b-1} dx$, 
+\item incomplete beta function $\forall 1\geq u\geq 0, \beta(a,b,u)=\int_0^{u} x^{a-1} (1-x)^{b-1} dx $;
+\item results for beta function $\forall a,b>0, \beta(a,b) = \frac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}$
+\item digamma function: $\forall x>0, \psi(x) = \frac{\Gamma'(x)}{\Gamma(x)}$
+\item trigamma function: $\forall x>0, \psi_1(x) = \frac{\Gamma''(x)}{\Gamma(x)}$
+\item error function : $\operatorname{erf}(x) = \frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2} dt$
+\end{itemize}
+
+
+
+\subsection{Factorial functions}
+\begin{itemize}
+\item factorial : $\forall n \in \mbb{N}, n! = n\times(n-1)\dots 2\times 1$
+\item rising factorial : $\forall n,m \in \mbb{N}^2, m^{(n)} = m\times(m+1)\dots (m+n-2)\times (m+n-1)=\frac{\Gamma(n+m)}{\Gamma(n)}$
+\item falling factorial: $\forall n,m \in \mbb{N}^2, (m)_{n} = m\times(m-1)\dots (m-n+2)\times (m-n+1)=\frac{\Gamma(m)}{\Gamma(m-n)}$ 
+\item combination number : $\forall n,p \in \mathbb{N}^2, ~C_n^p = \frac{n!}{p!(n-p)!}$
+\item arrangement number $A_n^p = \frac{n!}{(n-p)!}$
+\item Stirling number of the first kind : coefficients $\,_1S_n^k$ of the expansion of $(x)_n = \sum_{k=0}^n \,_1S_n^k x^k$ or defined by the recurrence $\,_1S_{n}^k = (n-1)\times \,_1S_{n-1}^k + \,_1S_{n-1}^{k-1}$ with $\,_1S_n^0 = \delta_{n0}$ and $\,_1S_0^1 =  0$.
+\item Stirling number of the second kind : coefficients $\,_2S_n^k$ of the expansion $\sum_{k=0}^n \,_2S_n^k (x)_k=x^n$ or defined by the recurrence $\,_2S_n^k=\,_2S_{n-1}^{k-1} +k\times \,_2S_{n-1}^k$ with $\,_2S_n^1=\,_2S_n^n=1$.
+\end{itemize}
+
+\subsection{Serie functions}
+\begin{itemize}
+\item Riemann's zeta function : $\forall s>1, \zeta(s) = \sum\limits_{n=1}^{+\infty}\frac{1}{n^s}$
+\item Jonqui\`ere's function : $\forall s>1, \forall z >0, Li_s(z)= \sum\limits_{n=1}^{+\infty}\frac{z^n}{n^s}$
+\item hypergeometric function : $\forall a,b,c\in \mbb{N}, \forall z\in \mbb{R}, {}_1F_1(a,b,z)= \sum\limits_{n=0}^{+\infty} \frac {a^{(n)} z^n} {b^{(n)} n!}$, $\,_2F_1 (a,b,c,z) = \sum\limits_{n=0}^{+\infty} \frac{a^{(n)} b^{(n)}}{c^{(n)}}  \frac {z^n} {n!}$ and $\,_3F_1 (a,b,c,d,e,z) = \sum\limits_{n=0}^{+\infty} \frac{a^{(n)} b^{(n)}c^{(n)}}{d^{(n)}e^{(n)}}  \frac {z^n} {n!}$.
+
+\item Bessel's functions verify the following ODE: $x^2y''+xy'+(x^2-\alpha^2)y=0$. We define the Bessel function of the 1\textsuperscript{st} kind by
+$J_\alpha(x) = \sum\limits_{n=0}^\infty \frac{(-1)^n}{n!\Gamma(n+\alpha+1)}\left(\frac{x}{2}\right)^{2n+\alpha}$
+ and of the  2\textsuperscript{nd} kind 
+ $Y_\alpha(x) = \frac{J_\alpha(x)cos(\alpha\pi)-J_{-\alpha}(x)}{sin(\alpha\pi)}$.
+\item Hankel's function: $H_\alpha^{(1)}(x) = J_\alpha(x)+i Y_\alpha(x)$
+\item Bessel's modified function $I_\alpha(x) = i^{-\alpha} J_\alpha(ix) = \sum\limits_{k=0}^{+\infty}\frac{(x/2)^{2k+\alpha}}{k!\Gamma(\alpha+k+1)}$ and 
+$K_\alpha(x) = \frac{\pi}{2}i^{\alpha+1} H_\alpha^{(1)}(x) = \frac{1}{2}\int_0^\infty y^{\alpha-1} e^{-\frac{x}{2}(y+y^{-1})}dy$
+\item Laguerre's polynomials: $L_n (x) =\frac{e^x}{n!}\frac{d^n(e^x x^n)}{dx^n} =  \sum_{i=0}^n (-1)^i C_{n}^{n-i} \frac{x^i}{i!}$
+\item generalized Laguerre's polynomials: $L_n^{(\alpha)} (x) =\frac{e^x}{n!x^\alpha}\frac{d^n(e^x x^{n+\alpha})}{dx^n} =  \sum_{i=0}^n (-1)^i C_{n+\alpha}^{n-i} \frac{x^i}{i!}$
+\end{itemize}
+
+\subsection{Miscellanous}
+\begin{itemize}
+\item Dirac function: $\forall x>0,\delta_{x_0}(x)=
+\left\{
+\begin{array}{cl}
++\infty & \txtm{si} x=x_0\\
+0 & \txtm{sinon}
+\end{array}
+\right.
+$ et
+\item heavyside function : $H_{x_0}(x)=
+\left\{
+\begin{array}{ll}
+0 & \txtm{si} x<x_0\\
+\frac{1}{2} & \txtm{si} x=x_0\\
+1 & \txtm{sinon}
+\end{array}
+\right.
+$
+\item Cantor function : $\forall x\in [0,1], F_n(x)=
+\left\{
+\begin{array}{cl}
+x & \txtm{si} n=0\\
+\frac{1}{2}F_{n-1}(3x) & \txtm{si} n\neq 0 \txtm{et} 0\geq x\geq \frac{1}{3}\\
+\frac{1}{2} & \txtm{si} n\neq 0 \txtm{et} \frac{1}{3}\geq x\geq \frac{2}{3}\\
+\frac{1}{2} +\frac{1}{2}F_{n-1}(3(x-\frac{2}{3}))& \txtm{si} n\neq 0 \txtm{et} \frac{2}{3}\geq x\geq 1\\
+\end{array}
+\right.$
+
+\end{itemize}
+
+\section{Matrix exponential}\label{computexpm}
+Now let us consider the problem of computing $e^{Qu}$. We recall that 
+$$
+e^{Qu} =\sum_{n=0}^{+\infty} \frac{Q^nu^n}{n!}.
+$$
+There are various methods to compute the matrix exponential, \cite{molervanloan} makes a deep analysis
+of the efficiency of different methods. In our case, we choose a decomposition method. We diagonalize the $n\times n$ matrix $Q$
+and use the identity
+$$
+e^{Qu} = Pe^{Du}P^{-1},
+$$
+where $D$ is a diagonal matrix with eigenvalues on its diagonal and $P$ the eigenvectors. We compute 
+$$
+e^{Qu} = \sum_{l=1}^{m} e^{\lambda_l u} \underbrace{ P M_l P^{-1} }_{C_l},
+$$
+where $\lambda_i$ stands for the eigenvalues of $Q$, $P$ the eigenvectors and $M_l=(\delta_{il} \delta_{lj})_{ij}$
+%$$
+%M_i = \left(
+%\begin{array}{cccc}
+%0 & 0 & 0 & 0\\
+%0 & 0 & \ddots & \vdots\\
+%\vdots & \ddots & 1  &0\\
+%0 & 0 & 0 & 0\\
+%\end{array}
+%\right).
+%$$
+ ($\delta_{ij}$ is the symbol Kronecker, i.e. equals to zero except when $i=j$). As the matrix $M_l$ is a sparse 
+ matrix with just a $1$ on the $l^{th}$ term of its diagonal. The constant $C_i$ can be simplified. Indeed,
+ if we denote by $X_l$ the $l^{th}$ column of the matrix $P$ (i.e. the eigenvector associated to the eigenvalue
+ $\lambda_l$) and $Y_l$ the $l^{th}$ row of the matrix $P^{-1}$, then we have 
+ $$
+  C_l\stackrel{\triangle}{=} P M_l P^{-1}  =  X_l\otimes Y_l.
+  $$
+  
+  Despite $Q$ is not obligatorily diagonalizable, this procedure will often work, since $Q$ may have a complex eigenvalue (say $\lambda_i$).
+In this case, $C_i$ is complex but as $e^{Qu}$ is real, we are ensured there is $j\in [\![1,\dots,m ]\!]$, such that 
+$\lambda_j$ is the conjugate of $\lambda_l$. Thus, we get 
+$$
+e^{\lambda_i u}C_i+e^{\lambda_j u}C_j = 2 cos(\Im(\lambda_i)u) e^{\Re{\lambda_i}u}  \Re(X_i\otimes Y_i)
+-2sin(\Im(\lambda_i)u) e^{\Re{\lambda_i}u}  \Im(X_i\otimes Y_i) \in \mathbb R,
+$$
+where $\Re$ and $\Im$ stands resp. for the real and the imaginary part.
+
+\section{Kronecker product and sum\label{kronecker}}
+The Kronecker product $A\otimes B$ is defined as the $mn\times mn$ matrix 
+$$
+A\otimes B = (A_{i_1,j_1} B_{i_2,j_2})_{i_1i_2,j_1j_2},
+$$
+when $A$ is a $m\times m$ matrix of general term $(A_{i_1,j_1})_{i_1,j_1}$ and $B$ 
+a $n\times n$ matrix of general term $(B_{i_2,j_2})_{i_2,j_2}$. Note that the Kronecker can
+also be defined for non-square matrixes.
+
+The Kronecker sum $A\oplus B$ is given by the $mn\times mn$ matrix 
+$$
+A\otimes B =  A\otimes I_m + B\otimes I_n,
+$$
+where $I_m$ and $I_n$ are the identity matrixes of size $m$ and $n$. This definition is right only
+for square matrixes $A$ and $B$.

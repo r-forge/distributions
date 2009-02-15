@@ -1,0 +1,19 @@
+\chapter*{Introduction}
+This guide is intended to provide a quite exhaustive (at least as I can) view on probability distributions. It is constructed in chapters of distribution family with a section for each distribution. Each section focuses on the tryptic: definition - estimation - application.
+
+Ultimate bibles for probability distributions are \cite{thesaurus} which lists 750 univariate discrete distributions and \cite{kotz} which details continuous distributions.
+
+In the appendix, we recall the basics of probability distributions as well as ``common'' mathematical functions, cf. section \ref{mathfun}. And for all distribution, we use the following notations
+\begin{itemize}
+\item $X$ a random variable following a given distribution,
+\item $x$ a realization of this random variable,
+\item $f$ the density  function (if it exists),
+\item $F$ the (cumulative) distribution function,
+\item $P(X=k)$ the mass probability function in $k$,
+\item $M$ the moment generating function (if it exists),
+\item $G$ the probability generating function (if it exists),
+\item $\phi$ the characteristic function (if it exists),
+\end{itemize} 
+
+Finally all graphics are done the open source statistical software \soft{R} and its numerous packages available on the Comprehensive R Archive Network (CRAN\footnote{\url{http://cran.r-project.org}}). See the CRAN task view\footnote{\url{http://cran.r-project.org/web/views/Distributions.html}} on probability distributions to know the package to use for a given ``non standard'' distribution, which is not in base \soft{R}.
+
