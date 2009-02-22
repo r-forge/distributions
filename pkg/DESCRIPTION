@@ -1,11 +1,13 @@
-Package: probdistr	
+Package: probdistr
 Type: Package
-Title: handbook on probability distributions
+Title: Handbook on Probability Distributions
 Version: 1.00
 Date: 2009-02-10
 Author: Christophe Dutang and members of the R-forge project probdistr
 Maintainer: Christophe Dutang <christophe.dutang@ensimag.fr>
-Description: 
+Description: Provide a handbook on probability distributions with 
+    plenty of code example for plotting, fitting and/or using 
+    probability distributions.
 Depends: R (>= 2.6.0), VGAM, actuar, triangle, ghyp, POT
-License: GPL (>= 2)
+License: GPL-3
 Encoding: latin1
