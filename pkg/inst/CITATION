@@ -6,7 +6,7 @@ citHeader("To cite probdistr in publications use:")
 
 citEntry(entry="Manual",
          title = "probdistr: handbook on probability distributions",
-         author = personList(as.person("M. Kohl")),
+         author = personList(as.person("C. Dutang et al.")),
          language = "English",
          year = year,
          note = note,
