@@ -1,6 +1,8 @@
-    Copyright (c) 2009 Christophe Dutang and the members of the R forge project probdistr.
-    Permission is granted to copy, distribute and/or modify this document
-    under the terms of the GNU Free Documentation License, Version 1.2
-    or any later version published by the Free Software Foundation;
-    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
-    A copy of the license is included in this package. 
+-- all the code, except the exceptions listed below, is distributed under the terms of 
+the GNU General Public License as published by the Free Software Foundation; 
+either version 2 of the License, or (at your option) any later version. A copy 
+of the GNU General Public License is available at http://www.r-project.org/Licenses/
+or can de found in the 'inst' directory.
+
+-- the vignette (i.e. the pdf files and the sweave files) is under the GNU Free Documentation License. A copy of the GNU FDL can be found at http://www.gnu.org/licenses/licenses.html#FDL 
+or in the 'inst' directory.

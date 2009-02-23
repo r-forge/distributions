@@ -1,3 +1,25 @@
+%----------------------------------------------------------------------------------------------------------
+% 	Copyright (c) 2009 R-forge 'distributions' Core Team, 
+% 	
+%	The following Sweave code is under the GNU Free Documentation License:
+%      	Permission is granted to copy, distribute and/or modify this document
+%      	under the terms of the GNU Free Documentation License, Version 1.3
+%      	or any later version published by the Free Software Foundation;
+%      	with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+%
+%      A copy of the license is included in the 'inst' directory of this package 
+%      or on the web at http://www.gnu.org/licenses/licenses.html#FDL
+%
+%	After running Sweave, the following code could be compiled :
+%	  - on windows with a Tex distribution such as miktex (http://miktex.org) 
+%		and a front end Latex editor such as texniccenter (http://www.toolscenter.org)
+%	  - on mac os with a Tex distribution such as TexLive and a front end Latex
+%	  	editor such as Texshop (http://www.uoregon.edu/~koch/texshop/)
+%	  - on linux with a Tex distribution such as teTex (http://www.tug.org/teTeX/)
+%	  	and a front end Latex editor such as emacs (http://www.gnu.org/software/emacs/)
+%
+%----------------------------------------------------------------------------------------------------------
+
 \chapter{Generalization of common distributions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Generalized hyperbolic distribution}
@@ -704,21 +726,21 @@ The exponential family of distributions in fact contains the most frequently use
 
 \begin{table}[!htb]
 \center
-\begin{tabular}{lllll}
+\begin{tabular}{llllll}
 \hline
-Law & Distribution & $\theta$ & $\phi$ & Variance\\
+Law & Distribution & $\theta$ & $\phi$ & Expectation & Variance\\
 \hline
-Normal $\mathcal N(\mu,\sigma^2)$ & $\frac{1}{\sqrt{2\pi \sigma}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$ & $\mu$ & $\sigma^2$ & 1\\
+Normal $\mathcal N(\mu,\sigma^2)$ & $\frac{1}{\sqrt{2\pi \sigma}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$ & $\mu$ & $\sigma^2$ & $\mu=\theta$ & 1\\
 \hline
-Gamma $\mathcal G(\alpha,\beta)$ & $\frac{\beta^\alpha x^{\alpha-1}}{\Gamma(\alpha)} e^{-\beta x}$ & $-\frac{\beta}{\alpha} = \frac{1}{\mu}$ & $\frac{1}{\alpha}$ & $\mu^2$\\
+Gamma $\mathcal G(\alpha,\beta)$ & $\frac{\beta^\alpha x^{\alpha-1}}{\Gamma(\alpha)} e^{-\beta x}$ & $-\frac{\beta}{\alpha} = \frac{1}{\mu}$ & $\frac{1}{\alpha}$ & $\mu=-\frac{1}{\theta}$ & $\mu^2$\\
 \hline
-Inverse Normal $\mathcal I(\mu,\lambda)$ & $\sqrt{\frac{\lambda}{2\pi x^3}} e^{-\frac{\lambda(x-\mu)^2}{2\mu^2x}}$ & $-\frac{1}{2\mu^2}$ & $\frac{1}{\lambda}$ & $\mu^3$\\
+Inverse Normal $\mathcal I(\mu,\lambda)$ & $\sqrt{\frac{\lambda}{2\pi x^3}} e^{-\frac{\lambda(x-\mu)^2}{2\mu^2x}}$ & $-\frac{1}{2\mu^2}$ & $\frac{1}{\lambda}$ & $\mu=(-2\theta)^{-\frac{1}{2}}$ & $\mu^3$\\
 \hline
-Bernoulli $\mathcal B(\mu)$ & $\mu^x(1-\mu)^{1-x}$ & $\log(\frac{\mu}{1-\mu})$ & 1 & $\mu(1-\mu)$\\
+Bernoulli $\mathcal B(\mu)$ & $\mu^x(1-\mu)^{1-x}$ & $\log(\frac{\mu}{1-\mu})$ & 1 & $\mu=\frac{e^\theta}{1+e^\theta}$ &  $\mu(1-\mu)$\\
 \hline
-Poisson $\mathcal P(\mu)$ & $\frac{\mu^x}{x!} e^{-\mu}$ & $\log(\mu)$ & 1 & $\mu$\\
+Poisson $\mathcal P(\mu)$ & $\frac{\mu^x}{x!} e^{-\mu}$ & $\log(\mu)$ & 1 & $\mu=e^\theta$ & $\mu$\\
 \hline
-Overdispersed Poisson $\mathcal P(\phi,\mu)$ & $\frac{\mu^\frac{x}{\phi}}{\frac{x}{\phi}!} e^{-\mu}$ & $\log(\mu)$ & $\phi$ & $\phi\mu$\\
+Overdispersed Poisson $\mathcal P(\phi,\mu)$ & $\frac{\mu^\frac{x}{\phi}}{\frac{x}{\phi}!} e^{-\mu}$ & $\log(\mu)$ & $\phi$ & $\phi e^\theta$ & $\phi\mu$\\
 \hline 
 \end{tabular}
 \end{table}
