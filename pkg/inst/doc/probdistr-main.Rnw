@@ -23,6 +23,8 @@
 
 \documentclass[11pt,twoside]{report}
 
+\usepackage{Sweave}
+
 % package
 %symbole math de l'American Mathematical Society (AMS)
 \usepackage{amsfonts,amssymb,amsmath}
@@ -170,25 +172,29 @@
 %%%%%%%%%%%%
 %  Main chapters.
 %%%%%%%%%%%%
+
 \part{Discrete distributions}
-\input{probdistr-discrete}
-\input{probdistr-discrextra}
+
+\SweaveInput{probdistr-discrete}
+\SweaveInput{probdistr-discrextra}
 
 \part{Continuous distributions}
-\input{probdistr-finitesupp}
-\input{probdistr-gaussian} 
-\input{probdistr-exp}
-\input{probdistr-chi}
-\input{probdistr-student}
-\input{probdistr-pareto}  
-\input{probdistr-logis}  
-\input{probdistr-gumbel}
+
+\SweaveInput{probdistr-finitesupp}
+\SweaveInput{probdistr-gaussian} 
+\SweaveInput{probdistr-exp}
+\SweaveInput{probdistr-chi}
+\SweaveInput{probdistr-student}
+\SweaveInput{probdistr-pareto}  
+\SweaveInput{probdistr-logis}  
+\SweaveInput{probdistr-gumbel}
 
 
 \part{Multivariate and generalized distributions}
-\input{probdistr-general}
-\input{probdistr-mult}
-\input{probdistr-misc}
+
+\SweaveInput{probdistr-general}
+\SweaveInput{probdistr-mult}
+\SweaveInput{probdistr-misc}
 
 %todo
 % rappel probabilité
@@ -211,7 +217,7 @@
 
 \newpage
 \appendix
-\input{probdistr-math}
+\SweaveInput{probdistr-math}
 
 %%%%%%%%%%%
 % full table of contents
