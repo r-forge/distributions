@@ -496,3 +496,5 @@ an inversion function method $F^{-1}(U)$ with $U$ uniformly distributed is easil
 
 \subsection{Applications}
 From wikipedia, we know a good example of the use of the Kumaraswamy distribution: the storage volume of a reservoir of capacity $z_{max}$ whose upper bound is $z_{max}$ and lower bound is 0.
+
+

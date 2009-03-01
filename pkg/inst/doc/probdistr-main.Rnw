@@ -25,6 +25,7 @@
 
 \usepackage{Sweave}
 
+
 % package
 %symbole math de l'American Mathematical Society (AMS)
 \usepackage{amsfonts,amssymb,amsmath}
@@ -121,10 +122,13 @@
 
 \date{2009}
 
+%-----------------------------
 \begin{document}
 
 
-
+%%%%%%%%%%%%
+%  First page
+%%%%%%%%%%%%
 \begin{titlepage}
 \setlength\headheight{4pt}
 \setlength\footskip{0pt}
@@ -167,7 +171,7 @@
 \shorttableofcontents{Contents}{0}
 
 \addcontentsline{toc}{chapter}{Introduction}
-\input{probdistr-intro}
+\SweaveInput{probdistr-intro}
 
 %%%%%%%%%%%%
 %  Main chapters.
@@ -196,8 +200,6 @@
 \SweaveInput{probdistr-mult}
 \SweaveInput{probdistr-misc}
 
-%todo
-% rappel probabilité
 
 \newpage
 \addcontentsline{toc}{chapter}{Conclusion}
@@ -226,3 +228,4 @@
 
 
 \end{document}
+%-----------------------------

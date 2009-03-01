@@ -170,7 +170,7 @@ e^{-e^{-x}}, & x\in \mbb R, \xi=0, & \txtm{MDA of Gumbel} \\
 \end{array}
 \right. ,
 $$
-where MDA stands for maximum domains of attraction. For all distribution, there is a unique MDA. We quickly see that the limiting distribution for the maximum is nothing else than the generalized extreme value distribution $H_{\xi,0,1}$. This theorem is the Fisher-Tippett-Gnedenko theorem. 
+where MDA stands for maximum domains of attraction\footnote{Sometimes the distribution characterized by the distribution function $e^{-e^{-x}}$ is called the extreme maximal-value distribution.}. For all distribution, there is a unique MDA. We quickly see that the limiting distribution for the maximum is nothing else than the generalized extreme value distribution $H_{\xi,0,1}$. This theorem is the Fisher-Tippett-Gnedenko theorem. 
 
 For the minimum, assuming that $P\left(\frac{X_{1:n}-b_n}{a_n}\right)$ has a limit, the 
 limiting distribution belongs to
@@ -184,6 +184,7 @@ $$
 \end{array}
 \right. .
 $$
+Again there are three types for the limiting distribution\footnote{Sometimes the distribution characterized by the distribution function $1-e^{-e^{x}}$ is called the extreme minimal-value distribution.}.
 
 In the MDA of Fréchet, we have the Cauchy, the Pareto, the Burr, the log-gamma and the stable distributions, while in the Weibull MDA we retrieve the uniform, the beta and bounded support power law distribution. Finally, the MDA of Gumbel contains the exponential, the Weibull, the gamma, the normal, the lognormal, the Benktander distributions. 
 

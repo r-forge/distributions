@@ -22,7 +22,7 @@
 
 \chapter{Student and related distributions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Student t distribution}
+\section{Student t distribution}\label{sec:studentt}
 Intro?
 \subsection{Characterization}
 \begin{wrapfigure}{r}{0.5\textwidth}
@@ -152,3 +152,4 @@ TODO
 TODO
 \subsection{Applications}
 TODO
+
