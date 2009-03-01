@@ -650,7 +650,7 @@ Maximum likelihood estimators for $\beta$ and $\eta$ verify the following system
 $$
 \left\{
 \begin{array}{l}
-\frac{1}{\beta} = \frac{1}{n} \sum_{i=1}^n \left( \frac{\beta}{X_i} \right)^{\eta-1} \\
+\frac{1}{\beta}=\frac{1}{n}\sum_{i=1}^n\left( \frac{\beta}{X_i} \right)^{\eta-1} \\
 \frac{1}{\eta} + \log(\beta) = \frac{1}{n} \sum_{i=1}^n \left( \frac{\beta}{X_i} \right)^{\eta} \log\left( \frac{\beta}{X_i} \right) + \frac{1}{n}\sum_{i=1}^n \log(X_i)
 \end{array}
 \right. ,

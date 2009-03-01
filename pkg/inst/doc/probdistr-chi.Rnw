@@ -33,6 +33,7 @@
   \caption{Density function for chi-squared distributions}
 %  \vspace{-20pt}  
 \end{wrapfigure}
+
 There are many ways to define the chi-squared distribution. First, we can say a chi-squared distribution is the distribution of the sum
 $$
 \sum_{i=1}^k X_i^2,

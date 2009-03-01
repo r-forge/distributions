@@ -1,11 +1,14 @@
 TEXI2DVI = texi2dvi --pdf
 SWEAVE = R CMD Sweave
 RM = rm -rf
+DISTR = probdistr-chi.Rnw probdistr-contextra.Rnw probdistr-discrete.Rnw \
+  probdistr-discrextra.Rnw probdistr-ref.bib 
 
 all: probdistr-main.pdf clean
 
-probdistr-main.pdf : probdistr-main.Rnw
+probdistr-main.pdf : probdistr-main.Rnw $(DISTR)
 	$(SWEAVE) probdistr-main.Rnw
+	$(TEXI2DVI) probdistr-main.tex
 	$(TEXI2DVI) probdistr-main.tex
 
 clean:

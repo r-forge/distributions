@@ -1,4 +1,4 @@
-<<<<<<< .mine
+
 %----------------------------------------------------------------------------------------------------------
 % 	Copyright (c) 2009 R-forge 'distributions' Core Team, 
 % 	
@@ -73,5 +73,6 @@ TODO
 \subsection{Estimation}
 \subsection{Random generation}
 \subsection{Applications}
+
 
 

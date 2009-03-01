@@ -22,10 +22,6 @@
 
 
 \documentclass[11pt,twoside]{report}
-
-\usepackage{Sweave}
-
-
 % package
 %symbole math de l'American Mathematical Society (AMS)
 \usepackage{amsfonts,amssymb,amsmath}
@@ -35,12 +31,12 @@
 
 % accents 8 bits dans le fichier
 %\usepackage[applemac]{inputenc} %MAC encoding
-\usepackage[latin1]{inputenc} %UNIX encoding
+\usepackage[utf8]{inputenc} %UNIX encoding
 %\usepackage[ansinew]{inputenc} %WINDOWS encoding
 
 %graphique
-\usepackage[dvips]{graphicx}
-\usepackage{color,graphics}
+\usepackage{graphicx}
+\usepackage{color, graphics}
 
 \usepackage{tabls}
 
@@ -54,6 +50,7 @@
 
 %header
 \pagestyle{headings}
+
 
 %pour les url
 \usepackage{url}
@@ -115,20 +112,17 @@
 \newcommand{\updateFtext}{\addtocounter{footnote}{-\value{noteTabCap}}} %update footnote counter
 \newcommand{\ftext}[1]{\addtocounter{footnote}{1}  \footnotetext{#1}} %set the footnote text
 
-
+\usepackage{Sweave}
 
 \title{handbook on probability distributions}
 \author{R-forge distributions Core Team}
 
 \date{2009}
 
-%-----------------------------
 \begin{document}
 
 
-%%%%%%%%%%%%
-%  First page
-%%%%%%%%%%%%
+
 \begin{titlepage}
 \setlength\headheight{4pt}
 \setlength\footskip{0pt}
@@ -171,6 +165,7 @@
 \shorttableofcontents{Contents}{0}
 
 \addcontentsline{toc}{chapter}{Introduction}
+
 \SweaveInput{probdistr-intro}
 
 %%%%%%%%%%%%
@@ -180,26 +175,37 @@
 \part{Discrete distributions}
 
 \SweaveInput{probdistr-discrete}
+
 \SweaveInput{probdistr-discrextra}
 
 \part{Continuous distributions}
 
 \SweaveInput{probdistr-finitesupp}
-\SweaveInput{probdistr-gaussian} 
-\SweaveInput{probdistr-exp}
-\SweaveInput{probdistr-chi}
-\SweaveInput{probdistr-student}
-\SweaveInput{probdistr-pareto}  
-\SweaveInput{probdistr-logis}  
-\SweaveInput{probdistr-gumbel}
 
+\SweaveInput{probdistr-gaussian}
+
+\SweaveInput{probdistr-exp}
+
+\SweaveInput{probdistr-chi}
+
+\SweaveInput{probdistr-student}
+
+\SweaveInput{probdistr-pareto}
+
+\SweaveInput{probdistr-logis}
+
+\SweaveInput{probdistr-gumbel}
 
 \part{Multivariate and generalized distributions}
 
 \SweaveInput{probdistr-general}
+
 \SweaveInput{probdistr-mult}
+
 \SweaveInput{probdistr-misc}
 
+% todo
+% reminder on probability
 
 \newpage
 \addcontentsline{toc}{chapter}{Conclusion}
@@ -228,4 +234,3 @@
 
 
 \end{document}
-%-----------------------------
