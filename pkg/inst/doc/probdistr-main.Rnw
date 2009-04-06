@@ -127,9 +127,9 @@
 \setlength\headheight{4pt}
 \setlength\footskip{0pt}
 
-{\normalsize 	\includegraphics[scale=1]{img/Rlogo.jpg} powered
+{\normalsize 	R powered %\includegraphics[scale=1]{img/Rlogo.jpg}
 				\hfill 
-			\includegraphics[scale=0.35]{img/Rforgelogo.png} project
+			R-forge project %\includegraphics[scale=0.35]{img/Rforgelogo.png}
 }
 			
 \vspace{200pt}
