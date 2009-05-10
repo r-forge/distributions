@@ -717,7 +717,9 @@ and $m=n_1+n_2$.
 \end{itemize}
 
 \subsection{Estimation}
-NEED REFERENCES
+The estimation based on moments can be a starting point for parameters, but according to \cite{feldmanwhit} the fit is very poor. \cite{feldmanwhit} proposes a recursive algorithm matching theoretical quantiles and empirical quantiles. They illustrates their method with the Weibull and the Pareto distribution by a mixture of exponential distributions.
+
+First \cite{asmussenolhsson} and then \cite{leelin} fit phase-type distribution with the EM algorithm. \cite{leelin} also investigates goodness of fit and graphical comparison of the fit. \cite{leelin} focuses on mixture of Erlang distributions while \cite{asmussenolhsson} provides an algorithm for general phase-type distributions. \cite{leelin} illustrates their algorithm with an uniform, a Weibull, a Pareto and log-normal distributions.
 
 \subsection{Random generation}
 From \cite{neuts}, we have the following algorithm to generate phase-type distributed random variate. 
