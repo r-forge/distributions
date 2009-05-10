@@ -22,6 +22,12 @@
 
 
 \documentclass[11pt,twoside]{report}
+
+%\VignetteIndexEntry{Handbook on probability distributions}
+%\VignettePackage{probdistr}
+
+
+
 % package
 %symbole math de l'American Mathematical Society (AMS)
 \usepackage{amsfonts,amssymb,amsmath}

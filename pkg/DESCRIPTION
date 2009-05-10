@@ -11,3 +11,4 @@ Description: Provide a handbook on probability distributions with
 Depends: R (>= 2.6.0), VGAM, actuar, triangle, ghyp, POT
 License: GNU GPL-3 except the pdf vignette GNU FDL, see licence for details.
 Encoding: latin1
+LazyLoad: no
