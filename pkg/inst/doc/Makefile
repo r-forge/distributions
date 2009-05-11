@@ -11,7 +11,7 @@ probdistr-main.pdf : probdistr-main.Rnw $(DISTR)
 	$(TEXI2DVI) probdistr-main.tex
 
 clean:
-	$(RM) *.aux *.blg *.bbl *.brf *.out *.rel *.toc *~ auto
+	$(RM) *.aux *.blg *.bbl *.brf *.out *.rel *.toc *~
 
 cleanall:
 	$(RM) *.aux *.log *.blg *.bbl *.brf *.out *.rel *.toc *~ auto probdistr-main.pdf
