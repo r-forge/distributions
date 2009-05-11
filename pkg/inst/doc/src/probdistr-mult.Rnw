@@ -1,0 +1,47 @@
+%----------------------------------------------------------------------------------------------------------
+% 	Copyright (c) 2009 R-forge 'distributions' Core Team, 
+% 	
+%	The following Sweave code is under the GNU Free Documentation License:
+%      	Permission is granted to copy, distribute and/or modify this document
+%      	under the terms of the GNU Free Documentation License, Version 1.3
+%      	or any later version published by the Free Software Foundation;
+%      	with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+%
+%      A copy of the license is included in the 'inst' directory of this package 
+%      or on the web at http://www.gnu.org/licenses/licenses.html#FDL
+%
+%	After running Sweave, the following code could be compiled :
+%	  - on windows with a Tex distribution such as miktex (http://miktex.org) 
+%		and a front end Latex editor such as texniccenter (http://www.toolscenter.org)
+%	  - on mac os with a Tex distribution such as TexLive and a front end Latex
+%	  	editor such as Texshop (http://www.uoregon.edu/~koch/texshop/)
+%	  - on linux with a Tex distribution such as teTex (http://www.tug.org/teTeX/)
+%	  	and a front end Latex editor such as emacs (http://www.gnu.org/software/emacs/)
+%
+%----------------------------------------------------------------------------------------------------------
+
+
+\chapter{Multivariate distributions}
+
+\section{Multinomial}
+\section{Multivariate normal}
+\section{Multivariate elliptical}
+\section{Multivariate uniform}
+\section{Multivariate student}
+\section{Kent distribution}
+
+\section{Dirichlet distribution}
+\subsection{Characterization}
+TODO
+\subsection{Properties}
+TODO
+\subsection{Estimation}
+TODO
+\subsection{Random generation}
+TODO
+\subsection{Applications}
+TODO
+
+\section{Von Mises Fisher}
+\section{Evens}
+
