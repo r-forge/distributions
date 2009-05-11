@@ -172,7 +172,7 @@
 
 \addcontentsline{toc}{chapter}{Introduction}
 
-\SweaveInput{probdistr-intro}
+\SweaveInput{src/probdistr-intro}
 
 %%%%%%%%%%%%
 %  Main chapters.
@@ -180,35 +180,35 @@
 
 \part{Discrete distributions}
 
-\SweaveInput{probdistr-discrete}
+\SweaveInput{src/probdistr-discrete}
 
-\SweaveInput{probdistr-discrextra}
+\SweaveInput{src/probdistr-discrextra}
 
 \part{Continuous distributions}
 
-\SweaveInput{probdistr-finitesupp}
+\SweaveInput{src/probdistr-finitesupp}
 
-\SweaveInput{probdistr-gaussian}
+\SweaveInput{src/probdistr-gaussian}
 
-\SweaveInput{probdistr-exp}
+\SweaveInput{src/probdistr-exp}
 
-\SweaveInput{probdistr-chi}
+\SweaveInput{src/probdistr-chi}
 
-\SweaveInput{probdistr-student}
+\SweaveInput{src/probdistr-student}
 
-\SweaveInput{probdistr-pareto}
+\SweaveInput{src/probdistr-pareto}
 
-\SweaveInput{probdistr-logis}
+\SweaveInput{src/probdistr-logis}
 
-\SweaveInput{probdistr-gumbel}
+\SweaveInput{src/probdistr-gumbel}
 
 \part{Multivariate and generalized distributions}
 
-\SweaveInput{probdistr-general}
+\SweaveInput{src/probdistr-general}
 
-\SweaveInput{probdistr-mult}
+\SweaveInput{src/probdistr-mult}
 
-\SweaveInput{probdistr-misc}
+\SweaveInput{src/probdistr-misc}
 
 % todo
 % reminder on probability
@@ -231,7 +231,7 @@
 
 \newpage
 \appendix
-\SweaveInput{probdistr-math}
+\SweaveInput{src/probdistr-math}
 
 %%%%%%%%%%%
 % full table of contents
