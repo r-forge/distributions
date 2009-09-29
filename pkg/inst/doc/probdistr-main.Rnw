@@ -151,7 +151,7 @@
 	\vspace{12pt}
 	\Large R-forge distributions Core Team\\
 	\vspace{4pt}
-	\Large University Year 2008-2009\\
+	\Large University Year 2009-2010\\
 	\vspace{4pt}	
 \end{center}
 \vspace{200pt}
@@ -175,7 +175,7 @@
 \SweaveInput{src/probdistr-intro}
 
 %%%%%%%%%%%%
-%  Main chapters.
+%  Discrete distributions
 %%%%%%%%%%%%
 
 \part{Discrete distributions}
@@ -183,6 +183,10 @@
 \SweaveInput{src/probdistr-discrete}
 
 \SweaveInput{src/probdistr-discrextra}
+
+%%%%%%%%%%%%
+%  Continuous distributions
+%%%%%%%%%%%%
 
 \part{Continuous distributions}
 
@@ -202,6 +206,10 @@
 
 \SweaveInput{src/probdistr-gumbel}
 
+%%%%%%%%%%%%
+%  Multivariate and generalized distributions
+%%%%%%%%%%%%
+
 \part{Multivariate and generalized distributions}
 
 \SweaveInput{src/probdistr-general}
@@ -211,11 +219,12 @@
 \SweaveInput{src/probdistr-misc}
 
 % todo
-% reminder on probability
+% reminder on probability 
+
 
 \newpage
 \addcontentsline{toc}{chapter}{Conclusion}
-%\input{conclusion}
+%\SweaveInput{conclusion}
 
  
 

@@ -22,7 +22,51 @@
 
 \chapter{Misc}
 \section{MBBEFD distribution}
+The MBBEFD distribution comes from the actuarial science due to \cite{swissre}. MBBEFD stands for Maxwell-Boltzmann, Bore-Einstein and Fermi-Dirac distribution.
+
+\subsection{Characterization}
+The MBBEFD distribution is characterized by the following distribution function.
+$$
+F(x) = \left\{
+\begin{array}{cl}
+a\left(\frac{a+1}{a+b^x} -1\right) & \txtm{if} 0 \leq x \leq 1\\
+1 & \txtm{if} x >1\\
+\end{array}
+\right. ,
+$$
+for $x\in \mathbb R_+$. The MBBEFD distribution is a mixed distribution of a continuous distribution on $x\in ]0,1[$ and a
+discrete distribution in $x=1$. We have a mass probability for $x=1$
+$$
+p = 1-F(1) =  \frac{(a+1)b}{a+b}.
+$$
+The parameters $(a,b)$ are defined on a wide set of intervals, which are not trivial: $]-1,0[\times ]1, +\infty[$ and 
+$]-\infty, -1[\cup ]0,+\infty[\times ]0,1[$. The shape of the distribution function $F$ has the following properties
+\begin{itemize}
+\item for $(a,b) \in I_1 = ]-1,0[\times ]1, +\infty[$,  $F$ is concave,
+\item for $(a,b) \in I_2 = ]-\infty, -1[\times ]0,1[$,  $F$ is concave,
+\item for $(a,b) \in I_3 = ]0, b[\times ]0,1[$,  $F$ is concave,
+\item for $(a,b) \in I_4 = [b, 1[\times ]0,1[$,  $F$ is convex then concave,
+\item for $(a,b) \in I_4 = [1, +\infty[\times ]0,1[$,  $F$ is convex.
+\end{itemize}
+
+
+There is no usual density but if we use the Dirac function $\delta$, we can define a function $f$ such that
+$$
+f(x) = \frac{-a(a+1) b^x \ln(b)}{(a+b^x)^2} \ind_{]0,1[}(x) + \delta_1.
+$$
+which is a mix between a mass probability and a density functions.
+
+\subsection{Special cases}
+TODO 
+
+\subsection{Properties}
 TODO
+\subsection{Estimation}
+TODO
+\subsection{Random generation}
+TODO
+\subsection{Applications}
+
 \section{Cantor distribution}
 TODO
 \section{Tweedie distribution}

@@ -579,7 +579,7 @@ The following distributions are special cases of stable distributions:
 \begin{itemize}
 \item $\mcal S(2,0,\sigma/\sqrt 2,\mu)$ is a Normal distribution defined by the density $f(x) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$,
 \item $\mcal S(1,0,\gamma,\delta)$ is a Cauchy distribution defined by the density $f(x) = \frac{1}{\pi}\frac{\gamma}{\gamma^2+(x-\gamma)^2}$,
-\item $\mcal S(1/2,1,\gamma,\delta)$ is a Lévy distribution defined by the density $f(x) = \sqrt{\frac{\gamma}{2\pi}} \frac{1}{(x-\delta)^{\frac{3}{2}}} e^{-\frac{\gamma}{2(x-\delta)}}$.
+\item $\mcal S(1/2,1,\gamma,\delta)$ is a L\'evy distribution defined by the density $f(x) = \sqrt{\frac{\gamma}{2\pi}} \frac{1}{(x-\delta)^{\frac{3}{2}}} e^{-\frac{\gamma}{2(x-\delta)}}$.
 \end{itemize}
 
 \subsection{Estimation}
