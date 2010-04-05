@@ -121,7 +121,7 @@
 \usepackage{Sweave}
 
 \title{handbook on probability distributions}
-\author{R-forge distributions Core Team}
+\author{R-forge distributions Team}
 
 \date{2009}
 
@@ -133,9 +133,9 @@
 \setlength\headheight{4pt}
 \setlength\footskip{0pt}
 
-{\normalsize 	R powered %\includegraphics[scale=1]{img/Rlogo.jpg}
+{\normalsize 	%R powered 
 				\hfill 
-			R-forge project %\includegraphics[scale=0.35]{img/Rforgelogo.png}
+			R-forge project 
 }
 			
 \vspace{200pt}
@@ -149,16 +149,17 @@
 \HRule\\
 
 	\vspace{12pt}
-	\Large R-forge distributions Core Team\\
+	\Large R-forge distributions Team\\
 	\vspace{4pt}
 	\Large University Year 2009-2010\\
 	\vspace{4pt}	
 \end{center}
-\vspace{200pt}
+\vspace{250pt}
 
 
 {\normalsize \LaTeX powered \hfill 
-			Mac OS' TeXShop edited }
+			%Mac OS' TeXShop edited }
+			}
 
 \end{titlepage}
 

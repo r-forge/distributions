@@ -229,7 +229,7 @@ From this, we can see these estimators are biased, but we can derive unbiased es
 \end{itemize}
 Since those statistics $\tilde \alpha_n$ and $\tilde \sigma_n$ are sufficient, it is easy to find unbiased estimators of functions of these parameters $h(\alpha,\sigma)$ by plugging in $\tilde \alpha_n$ and $\tilde \sigma_n$ (i.e. $h(\tilde \alpha_n,\tilde \sigma_n)$).
 
-However other estimations are possible, for instance we may use a least square regression on the Pareto chart (plot of $\log \bar F(x)$ against $\log x$). We can also estimate parameters by the method of moments by equalling the sample mean and minimum to corresponding theoretical moments. We get
+However other estimations are possible, for instance we may use a least square regression on the Pareto chart (plot of $\log \bar F(x)$ against $\log x$)\footnote{The slope is $-\alpha$ and the intercept $\alpha \log(\sigma)$.}. We can also estimate parameters by the method of moments by equalling the sample mean and minimum to corresponding theoretical moments. We get
 \begin{itemize}
 \item $\hat \alpha_n^M = \frac{n \bar X_n - X_{1:n}}{n (\bar X_n - X_{1:n})}$,
 \item $\hat \sigma_n^M = \frac{n\hat \alpha_n^M-1}{n\hat \alpha_n^M} X_{1:n}$,

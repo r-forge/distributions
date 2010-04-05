@@ -160,7 +160,14 @@ Maximum likelihood estimators for $\mu$ and $\sigma^2$ are simply
 \item $\hat \mu = \frac{1}{n} \sum_{i=1}^n\log(x_i)$ is an unbiased estimator of $\mu$,
 \item $\widehat{\sigma^2} = \frac{1}{n-1} \sum_{i=1}^n (\log(x_i)- \hat \mu)^2$ is an unbiased estimator of $\sigma^2$\footnote{As for the $\sigma^2$ estimator of normal distribution, this estimator is not the maximum likelihood estimator since we unbias it.}.
 \end{itemize}
-One amazing fact about parameter estimations of log-normal distribution is that those estimators are very stable. 
+One amazing fact about parameter estimations of log-normal distribution is that those estimators are quite stable. 
+
+The moment estimators are obtained with the following formula:
+\begin{itemize}
+\item $\widetilde{\sigma^2} = \log\left( 1 + \frac{S_n^2}{\overline X_n} \right)$,
+\item $\tilde \mu = \log(\overline X_n) - \widetilde{\sigma^2}/2$,
+\end{itemize}
+where $\overline X_n$ and $S_n^2$ denote the sample mean and variance.
 
 \subsection{Random generation}
 Once we have generated a normal variate, it is easy to generate a log-normal variate just by taking the exponential of normal variates.
